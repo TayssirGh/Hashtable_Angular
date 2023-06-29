@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import {PresentationComponent} from "./presentation/presentation.component";
+import { RouterModule} from '@angular/router';
 
-const routes: Routes = [{path: "", component: PresentationComponent}];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot([
+    {path : '', loadChildren: () => import('./presentation/presentation.module').then(m =>m.PresentationModule)},
+    {path : 'test', loadChildren: () => import('./test/test.module').then(m =>m.TestModule)}
+  ])],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

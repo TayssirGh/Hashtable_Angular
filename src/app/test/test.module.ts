@@ -1,23 +1,22 @@
 import {NgModule} from "@angular/core";
-import {PresentationComponent} from "./presentation.component";
-import {PresentationRoutingModule} from "./presentation-routing.module";
 import {MenubarModule} from "primeng/menubar";
 import {ButtonModule} from "primeng/button";
 import {InputTextModule} from "primeng/inputtext";
 import {DialogModule} from "primeng/dialog";
+import {TestRoutingModule} from "./test-routing.module";
+import {TestComponent} from "./test.component";
 
 @NgModule({
   imports: [
-    PresentationRoutingModule,
-    MenubarModule,
+    TestRoutingModule,
     ButtonModule,
     InputTextModule,
     DialogModule
   ],
   exports: [
-    PresentationComponent
+    TestComponent
   ],
 
-  declarations: [PresentationComponent]
+  declarations: [TestComponent]
 })
-export class PresentationModule{}
+export class TestModule{}
