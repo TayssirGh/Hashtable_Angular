@@ -1,7 +1,23 @@
-<div class="card">
+<div class="card p-2 pb-3 mb-2">
   <p-menubar [model]="items" >
 
   </p-menubar>
 </div>
+<div>
+  <p-dialog header="Enter the size" [(visible)]="visible" [modal]="true" [style]="{ width: '20vw' }" [draggable]="false" [resizable]="false" >
+    <div class="flex justify-content-between">
+      <input type="text" pInputText [(ngModel)]="value" />
+      <p-button label="OK" (click)="drawTable()"></p-button>
+
+    </div>
+  </p-dialog>
+</div>
+
+<div>
+  <app-hashtable-draw class="pt-5" >
+
+  </app-hashtable-draw>
+</div>
+
 
 
