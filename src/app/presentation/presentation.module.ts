@@ -20,9 +20,10 @@ import {NgIf} from "@angular/common";
     ButtonModule,
     NgIf
   ],
-  exports: [
-    PresentationComponent
-  ],
+    exports: [
+        PresentationComponent,
+        HashtableDrawComponent
+    ],
 
   declarations: [PresentationComponent,
   HashtableDrawComponent]

@@ -46,7 +46,7 @@ export class Service{
       this.table.nodes[index] = node;
     }
     else {
-      let currentNode: Node = this.table.nodes[index];
+      let currentNode: Node |null = this.table.nodes[index] as Node;
       while (currentNode.next != null) {
         currentNode = currentNode.next;
       }

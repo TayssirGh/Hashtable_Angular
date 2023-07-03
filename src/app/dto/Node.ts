@@ -1,5 +1,5 @@
 export class Node{
-  private _value: string;
+  private _value: string ;
   private _next: Node |null ;
   constructor(value: string) {
     this._value = value;
