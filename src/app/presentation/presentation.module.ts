@@ -1,13 +1,12 @@
 import {NgModule} from "@angular/core";
-import {PresentationComponent} from "./presentation.component";
 import {PresentationRoutingModule} from "./presentation-routing.module";
 import {MenubarModule} from "primeng/menubar";
 import {ButtonModule} from "primeng/button";
 import {InputTextModule} from "primeng/inputtext";
 import {DialogModule} from "primeng/dialog";
-import {HashtableDrawComponent} from "./view/HashtableDrawComponent";
 import {FormsModule} from "@angular/forms";
 import {NgIf} from "@angular/common";
+import {PresentationComponent} from "./presentation.component";
 
 @NgModule({
   imports: [
@@ -22,10 +21,10 @@ import {NgIf} from "@angular/common";
   ],
     exports: [
         PresentationComponent,
-        HashtableDrawComponent
+        PresentationComponent
     ],
 
   declarations: [PresentationComponent,
-  HashtableDrawComponent]
+  PresentationComponent]
 })
 export class PresentationModule{}
